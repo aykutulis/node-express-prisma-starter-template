@@ -80,7 +80,7 @@ Ensure you have the following installed:
 4. Build and start the Docker containers:
 
    ```bash
-   docker-compose up --build
+   docker compose up --build
    ```
 
 ### Development
@@ -88,7 +88,7 @@ Ensure you have the following installed:
 For development, the server will automatically reload with changes:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 The development environment is configured to mount your local `src`, `public`, and `prisma` directories into the Docker container, allowing for instant feedback during development.
@@ -118,7 +118,7 @@ pnpm run typecheck
 For production, ensure your `.env` file is configured correctly and build the production image:
 
 ```bash
-docker-compose -f docker-compose.yaml up --build
+docker compose up --build
 ```
 
 This command will build the project using the `production` stage of the Dockerfile and start the containers.
